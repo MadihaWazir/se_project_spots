@@ -1,0 +1,122 @@
+.profile {
+  display: flex;
+  padding: 34px 0 20px;
+  border-bottom: 1px rgba(33, 33, 33, 0.4) solid;
+}
+
+.profile__avatar {
+  margin-right: 20px;
+  height: 190px;
+  width: 190px;
+  border-radius: 8px;
+}
+
+.profile__column {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile__name {
+  margin: 0 0 12px;
+  font-weight: 500;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  max-width: 420px;
+}
+
+.profile__title {
+  margin: 0;
+}
+
+.profile__description {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 16px;
+  text-align: left;
+  gap: 12px;
+  width: 97px;
+  height: 16px;
+  font-family: Poppins, Arial, sans-serif;
+  color: rgba(33, 33, 33, 0.7);
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  max-width: 420px;
+}
+
+.profile__edit-button {
+  margin-top: 15px;
+  border: none;
+  background-color: #fcf5e5;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  line-height: 1;
+  font-size: 16px;
+  font-weight: 500;
+  color: rgba(33, 33, 33, 0.7);
+}
+
+.profile__add-button {
+  margin-top: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  border-radius: 8px;
+  background-color: #212121;
+  color: #fcf5e5;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 16px;
+  gap: 8px;
+  height: 52px;
+  width: 149px;
+  padding: 0;
+}
+
+@media screen and (max-width: 627px) {
+  .profile {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+  }
+
+  .profile__avatar {
+    margin: 12px;
+    height: 80px;
+    width: 80px;
+    margin-right: 0;
+  }
+
+  .profile__name {
+    font-size: 20px;
+    margin-bottom: 6px;
+    max-width: 288px;
+  }
+
+  .profile__description {
+    margin-bottom: 32px;
+    font-size: 16px;
+    max-width: 288px;
+  }
+
+  .profile__column {
+    text-align: center;
+    margin-right: 0;
+  }
+
+  .profile__add-button {
+    margin-left: 0;
+    width: 100%;
+    max-width: 288px;
+  }
+
+  .profile__edit-button {
+    margin: 20px;
+  }
+}
