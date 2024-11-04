@@ -3,13 +3,22 @@
   justify-content: center;
   display: flex;
   align-items: center;
+  padding: 30px 0;
 }
 
 .footer__content {
   display: flex;
   justify-content: center;
-  height: 16px;
+  font-family: Poppins, Arial, Helvetica, sans-serif;
+  line-height: 16px;
   font-weight: 400;
   font-size: 16px;
   color: rgba(33, 33, 33, 0.7);
+}
+
+@media screen and (max-width: 627px) {
+  .footer__content {
+    padding: 0;
+    text-align: center;
+  }
 }
