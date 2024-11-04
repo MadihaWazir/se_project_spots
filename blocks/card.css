@@ -7,7 +7,7 @@
   width: 413px;
   object-fit: cover;
   display: block;
-  border-radius: 3%;
+  border-radius: 8px;
   margin-bottom: 12px;
 }
 
@@ -17,7 +17,7 @@
   justify-content: space-between;
   color: #212121;
   font-family: Poppins, Arial, Helvetica, sans-serif;
-  margin-top: 12px 0 0;
+  margin: 12px 0 0;
 }
 
 .card__title {
