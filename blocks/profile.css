@@ -45,7 +45,7 @@
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
-  max-width: 420px;
+  max-width: 97px;
 }
 
 .profile__edit-button {
@@ -53,6 +53,7 @@
   background-color: transparent;
   display: flex;
   border: none;
+  height: 16px;
   gap: 8px;
   font-family: Poppins, Arial, Helvetica, sans-serif;
   line-height: 16px;
@@ -121,17 +122,16 @@
 
   .profile__column {
     text-align: center;
-    margin-right: 0;
+    margin: 0;
   }
 
   .profile__add-button {
-    margin-left: 0;
+    margin: 20px;
     width: 100%;
     max-width: 288px;
   }
 
   .profile__edit-button {
-    margin: 20px;
     justify-content: center;
   }
 }
