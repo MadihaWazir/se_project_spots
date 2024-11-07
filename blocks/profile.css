@@ -37,7 +37,7 @@
   line-height: 16px;
   text-align: left;
   gap: 12px;
-  width: 420px;
+  max-width: 420px;
   font-family: Poppins, Arial, sans-serif;
   color: rgba(33, 33, 33, 0.7);
   text-overflow: ellipsis;
@@ -45,7 +45,6 @@
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
-  max-width: 97px;
 }
 
 .profile__edit-button {
@@ -126,7 +125,6 @@
   }
 
   .profile__add-button {
-    margin: 20px;
     width: 100%;
     max-width: 288px;
   }
