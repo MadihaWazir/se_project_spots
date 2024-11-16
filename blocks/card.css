@@ -40,9 +40,12 @@
   border: none;
   background-color: transparent;
   opacity: 40%;
-  background-position: center;
-  background-size: cover;
-  margin: 0;
+}
+
+.card__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .card__like-button:hover {
