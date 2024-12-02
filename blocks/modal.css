@@ -31,6 +31,10 @@
   border-radius: 8px;
 }
 
+.modal__preview-container {
+  background-image: url(../images/close-icon.svg);
+}
+
 .modal__container_type_preview {
   padding: 0;
 }
@@ -61,6 +65,7 @@
   top: 0;
   right: -52.5px;
   opacity: 1;
+  background-image: url(../images/close-icon.svg);
 }
 
 .modal__caption {
