@@ -9,6 +9,12 @@
   display: block;
   border-radius: 8px;
   margin-bottom: 12px;
+  background-image: url(../images/delete-icon-img.svg);
+}
+
+.card__image:hover {
+  background-image: url(../images/delete-icon-hover.svg);
+  cursor: pointer;
 }
 
 .card__content {
@@ -51,6 +57,25 @@
 .card__like-button:hover {
   opacity: 1;
   cursor: pointer;
+}
+
+.card__like-button_liked {
+  background-image: url(../images/like-icon-liked.svg);
+  opacity: 1;
+}
+
+.card__like-button_liked:hover {
+  background-image: url(../images/like-icon-liked-hover.svg);
+}
+
+.card__delete-button {
+  background-image: url(../images/delete-icon-img.svg);
+  background-color: url(../images/delete-icon.svg);
+  opacity: 30%;
+}
+
+.card__delete-button:hover {
+  background-image: url(../images/delete-icon-hover.svg);
 }
 
 @media screen and (max-width: 627px) {
