@@ -74,7 +74,7 @@
   border: none;
   cursor: pointer;
   background-image: url(../images/trash-icon.svg);
-  opacity: 30%;
+  background-color: transparent;
 }
 
 .card__delete-button:hover {
