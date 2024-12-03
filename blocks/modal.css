@@ -71,13 +71,15 @@
   background-color: #212121;
   border-radius: 8px;
   padding: 4px 8px;
-  width: fit-content;
   font-weight: 500;
   font-family: Poppins, Arial, Helvetica, sans-serif;
   font-size: 20px;
-  line-height: 19.2px;
+  line-height: 24px;
   text-align: left;
   color: #fff;
+  white-space: nowrap;
+  margin-top: 8px;
+  position: absolute;
 }
 
 .modal__close-button:hover {

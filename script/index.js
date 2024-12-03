@@ -114,7 +114,6 @@ editModalCloseButton.addEventListener("click", () => {
 });
 
 cardModalButton.addEventListener("click", () => {
-  console.log("Opening card modal");
   openModal(cardModal);
 });
 
