@@ -169,4 +169,13 @@
   .modal__container_type_preview {
     padding: 0;
   }
+
+  .modal__close-button_type_preview {
+    top: -41px;
+    right: 7px;
+  }
+
+  .modal__input {
+    font-size: 16px;
+  }
 }
