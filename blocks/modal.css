@@ -145,7 +145,7 @@
   }
 
   .modal__container {
-    padding: 12;
+    padding: 12px;
   }
 
   .modal__title {
@@ -165,30 +165,8 @@
   .modal__submit-button {
     width: 100%;
   }
-}
 
-@media screen and (max-width: 320px) {
-  .modal__close_type_preview {
-    top: -45px;
-    right: 7px;
-  }
-
-  .modal__content {
+  .modal__container_type_preview {
     padding: 0;
-  }
-
-  .modal__title {
-    color: rgba(33, 33, 33, 1);
-    margin-bottom: 24px;
-  }
-  .modal__image {
-    max-width: fit-content;
-    max-height: fit-content;
-    width: 100%;
-  }
-
-  .modal__close-button {
-    right: 12px;
-    top: 12px;
   }
 }
