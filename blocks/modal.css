@@ -100,6 +100,10 @@
   line-height: 32px;
 }
 
+.modal__form {
+  margin-top: 32px;
+}
+
 .modal__label {
   display: flex;
   flex-direction: column;
@@ -125,6 +129,21 @@
 
 .modal__input:hover {
   cursor: pointer;
+}
+
+.modal__input_type_error {
+  border: 1px solid rgba(255, 0, 0, 0.6);
+}
+
+.modal__error {
+  color: rgba(255, 0, 0, 0.7);
+  font-family: Poppins, Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 17.6px;
+  display: block;
+  margin-top: 8px;
+  visibility: hidden;
 }
 
 .modal__submit-button {
