@@ -104,7 +104,7 @@ function handleEditFormSubmit(evt) {
   evt.preventDefault();
   profileName.textContent = editModalNameInput.value;
   profileDescription.textContent = editModalDescriptionInput.value;
-  disableButton(editModalSubmit, config);
+  disableButton(cardSubmitButton, settings);
   closeModal(editModal);
 }
 

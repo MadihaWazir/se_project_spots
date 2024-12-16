@@ -37,9 +37,12 @@ const hasInvalidInput = (inputList) => {
 
 const toggleButtonState = (inputList, buttonEl, config) => {
   if (hasInvalidInput(inputList)) {
+    disableButton(buttonEl);
+    buttonEl.classList.add("modal__submit-button_disabled");
     buttonEl.disabled = true;
   } else {
     buttonEl.disabled = false;
+    buttonEl.classList.remove("modal__submit-button_disabled");
   }
 };
 
