@@ -41,13 +41,14 @@ const toggleButtonState = (inputList, buttonEl, config) => {
     buttonEl.classList.add("modal__submit-button_disabled");
     buttonEl.disabled = true;
   } else {
-    buttonEl.disabled = false;
     buttonEl.classList.remove("modal__submit-button_disabled");
+    buttonEl.disabled = false;
   }
 };
 
 const disableButton = (buttonEl, config) => {
   if (buttonEl) {
+    buttonEl.classList.add("modal__submit-button_disabled");
     buttonEl.disabled = true;
   }
 };
