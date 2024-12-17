@@ -89,6 +89,7 @@
 .modal__close-button:hover {
   cursor: pointer;
   opacity: 100%;
+  color: #212121;
 }
 
 .modal__title {

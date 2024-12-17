@@ -122,6 +122,11 @@ profileEditButton.addEventListener("click", () => {
   console.log("Opening edit modal");
   editModalNameInput.value = profileName.textContent;
   editModalDescriptionInput.value = profileDescription.textContent;
+  resetValidation(
+    editFormElement,
+    [editModalNameInput, editModalDescriptionInput],
+    settings
+  );
   openModal(editModal);
 });
 
