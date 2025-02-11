@@ -26,8 +26,8 @@ class Api {
       if (res.ok) {
         return res.json();
       }
-      Promise.reject(`Error: ${res.status}`);
     });
+    Promise.reject(`Error: ${res.status}`);
   }
 
   addCard({ name, link }) {

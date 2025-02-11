@@ -6,6 +6,11 @@ import {
   resetValidation,
 } from "../scripts/validation.js";
 
+import logo from "../images/logo.svg";
+import avatar from "../images/avatar.jpg";
+import profileImage from "../images/pencil-light.svg";
+import plusImage from "../images/plus.svg";
+
 import { setButtonText } from "../utils/helpers.js";
 
 import Api from "../utils/Api.js";
@@ -54,11 +59,9 @@ api
       cardsList.append(cardElement);
     });
 
-    profileAvatar.src = user.avatar;
-    profileName.textContent = user.name;
-    profileDescription.textContent = user.about;
-    cardNameInput.value = user.name;
-    cardLinkInput.value = user.about;
+    profileName.textContent = userInfo.name;
+    profileDescription.textContent = userInfo.about;
+    document.querySelector(".profile__avatar").src = userInfo.avatar;
   })
   .catch(console.error);
 
