@@ -1,5 +1,5 @@
 class Api {
-  constructor(baseUrl, headers) {
+  constructor({ baseUrl, headers }) {
     this._baseUrl = baseUrl;
     this._headers = headers;
   }
@@ -78,7 +78,7 @@ class Api {
   }
 
   deleteCard(id) {
-    return fetch(`${this._baseUrl}/cards/${id}`, {
+    return fetch(`${this._baseUrl}/cards/${cardId}`, {
       method: "DELETE",
       headers: this._headers,
     }).then((res) => {

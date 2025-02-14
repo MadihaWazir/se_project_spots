@@ -1,12 +1,14 @@
 export function setButtonText(
-  btn,
+  submitButton,
   isLoading,
-  defaultText = "Save",
-  loadingText = "Saving..."
+  loadingText = "Saving...",
+  defaultText = "Save"
 ) {
   if (isLoading) {
-    // set the loading text
+    submitButton.textContent = loadingText;
+    submitButton.setAttribute("disabled", true);
   } else {
-    // set the not loading text
+    submitButton.textContent = defaultText;
+    submitButton.removeAttribute("disabled");
   }
 }
