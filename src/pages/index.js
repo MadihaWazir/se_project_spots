@@ -58,13 +58,15 @@ api
       cardsList.append(cardElement);
     });
 
-    profileAvatar.src = user.avatar;
+    profileAvatar.src = avatar;
     profileName.textContent = user.name;
     profileDescription.textContent = user.about;
     cardNameInput.value = user.name;
     cardLinkInput.value = user.about;
   })
-  .catch(console.error);
+  .catch((err) => {
+    console.error(err);
+  });
 
 // Profile elements
 const profileEditButton = document.querySelector(".profile__edit-button");
@@ -97,7 +99,7 @@ const avatarSubmitButton = avatarModal.querySelector(".modal__submit-button");
 const avatarModalCloseButton = avatarModal.querySelector(
   ".modal__close-button"
 );
-const avatarInput = avatarModal.querySelector("#add-profile-avatar-input");
+const avatarinput = avatarModal.querySelector("#avatar-input");
 const avatarLinkInput = avatarModal.querySelector("#profile-avatar-input");
 
 // Delete form elements
@@ -213,7 +215,7 @@ function handleAddCardSubmit(evt) {
     .then((data) => {
       const cardEl = getCardElement(inputValues);
       cardsList.prepend(cardEl);
-      disableButton(cardSubmitButton, settings);
+
       evt.target.reset();
       closeModal(cardModal);
     })
@@ -222,18 +224,20 @@ function handleAddCardSubmit(evt) {
 
 function handleAvatarSubmit(evt) {
   evt.preventDefault();
-  const submitBtn = evt.submitter;
-  setButtonText(submitBtn, true, "Saving...", "Save");
+
+  const submitButton = evt.submitter;
+  setButtonText(submitButton, true, "Saving...", "Save");
   avatarSubmitButton.disabled = true;
+
   api
-    .editAvatarInfo(avatarInput.value)
+    .editAvatarInfo(avatarLinkInput.value)
     .then((data) => {
       profileAvatar.src = data.avatar;
       closeModal(avatarModal);
     })
     .catach(console.error)
     .finally(() => {
-      setTumeout(() => {
+      setTimeout(() => {
         avatarSubmitButton.disabled = false;
       }, 1000);
     });
