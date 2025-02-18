@@ -101,8 +101,21 @@
   line-height: 24px;
 }
 
+.modal__title-submit {
+  height: 24px;
+  font-family: Poppins, Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  line-height: 24px;
+
+  font-size: 24;
+}
+
 .modal__form {
   margin-top: 32px;
+}
+
+.modal__form-delete {
+  gap: 12px;
 }
 
 .modal__label {
@@ -163,23 +176,28 @@
 .modal__submit-button:hover {
   cursor: pointer;
   opacity: 80%;
+  background: rgba(0, 0, 0, 0.8);
 }
 
 .modal__submit-button_disabled {
   background-color: #212121;
+  opacity: 50%;
 }
 
 .modal__close-button_close-icon {
   color: #fff;
   right: -40px;
   top: -5px;
-  width: 40px;
-  height: 40px;
 }
 
 .modal__submit-button_delete {
   background-color: #ff6565;
   color: #212121;
+  border: none;
+  font-family: Poppins, Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 16px;
 }
 
 .modal__submit-button_delete:hover {
@@ -189,17 +207,16 @@
 
 .modal__submit-button_cancel {
   width: 156px;
-  padding: 18px 0;
   font-family: Poppins, Helvetica, sans-serif;
   font-size: 16px;
   font-weight: 500;
   line-height: 16px;
+  gap: 8px;
   border-radius: 8px;
-  color: #212121;
+  border: 1px solid #212121;
   background-color: #fff;
-  opacity: 100%;
-  padding: 18px, 32px;
-  border: 1px;
+  color: #212121;
+  background: none;
 }
 
 .modal__submit-button_cancel:hover {
@@ -223,9 +240,18 @@
     margin: 10px 0 34px;
   }
 
+  .modal__title-submit {
+    justify-content: space-between;
+  }
+
   .modal__close-button {
     top: 12px;
     right: 12px;
+  }
+
+  .modal__close-button_close-icon {
+    top: -50px;
+    right: -5px;
   }
 
   .modal__label {
@@ -250,9 +276,21 @@
     font-size: 16px;
   }
 
+  .modal__form-delete {
+    gap: 12px;
+  }
+
   .modal__image {
     max-height: none;
     max-width: none;
     width: 100%;
+  }
+
+  .modal__submit-button_delete {
+    justify-content: center;
+  }
+
+  .modal__submit-button_cancel {
+    justify-content: center;
   }
 }

@@ -58,11 +58,13 @@ api
       cardsList.append(cardElement);
     });
 
-    profileAvatar.src = avatar;
-    profileName.textContent = user.name;
-    profileDescription.textContent = user.about;
-    cardNameInput.value = user.name;
-    cardLinkInput.value = user.about;
+    const profileAvatar = document.querySelector(".profile__avatar");
+
+    function setUserData(data) {
+      profileName.textContent = data.name;
+      profileDescription.textContent = data.about;
+      profileAvatar.src = data.avatar;
+    }
   })
   .catch((err) => {
     console.error(err);
@@ -235,7 +237,7 @@ function handleAvatarSubmit(evt) {
       profileAvatar.src = data.avatar;
       closeModal(avatarModal);
     })
-    .catach(console.error)
+    .catch(console.error)
     .finally(() => {
       setTimeout(() => {
         avatarSubmitButton.disabled = false;

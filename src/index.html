@@ -187,8 +187,6 @@
               type="url"
               class="modal__input"
               placeholder="Paste the link to an image"
-              minlength="2"
-              maxlength="40"
               required
             />
             <span id="profile-avatar-input-error" class="modal__error"></span>
@@ -199,16 +197,20 @@
     </div>
 
     <div class="modal" id="delete-modal">
-      <div class="modal__container">
+      <div class="modal__container modal__container-delete">
         <button
           aria-label="Close modal"
           type="button"
           class="modal__close-button modal__close-button_close-icon"
         ></button>
-        <h2 class="modal__title">
+        <h2 class="modal__title modal__title-submit">
           Are you sure you want to delete this image?
         </h2>
-        <form id="delete-form" class="modal__form" novalidate>
+        <form
+          id="delete-form"
+          class="modal__form modal__form-delete"
+          novalidate
+        >
           <button
             type="submit"
             class="modal__submit-button modal__submit-button_delete"

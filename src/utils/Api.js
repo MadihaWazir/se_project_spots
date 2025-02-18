@@ -16,7 +16,7 @@ class Api {
   }
 
   getAppInfo() {
-    return Promise.all([this.getInitialCards(), this.getUserInfo]);
+    return Promise.all([this.getInitialCards(), this.getUserInfo()]);
   }
 
   getInitialCards() {
@@ -78,7 +78,7 @@ class Api {
   }
 
   deleteCard(id) {
-    return fetch(`${this._baseUrl}/cards/${cardId}`, {
+    return fetch(`${this._baseUrl}/cards/${id}`, {
       method: "DELETE",
       headers: this._headers,
     }).then((res) => {
