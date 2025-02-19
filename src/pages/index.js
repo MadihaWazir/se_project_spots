@@ -97,7 +97,7 @@ deleteModalCloseButton.addEventListener("click", () => {
 });
 
 const deleteModalCancelButton = deleteModal.querySelector(
-  ".modal__submit-button"
+  ".modal__submit-button_cancel"
 );
 
 deleteModalCancelButton.addEventListener("click", () => {
@@ -216,7 +216,7 @@ function handleAddCardSubmit(evt) {
   api
     .addCard(inputValues)
     .then((data) => {
-      const cardEl = getCardElement(inputValues);
+      const cardEl = getCardElement(data);
       cardsList.prepend(cardEl);
 
       evt.target.reset();
@@ -253,7 +253,10 @@ function handleDeleteSubmit(evt) {
       selectedCard.remove();
       closeModal(deleteModal);
     })
-    .catch(console.error);
+    .catch(console.error)
+    .finally(() => {
+      setButtonText(submitBtn, false, "Deleting...", "Delete");
+    });
 }
 
 function handleDeleteCard(cardElement, cardId) {
@@ -271,14 +274,6 @@ function handleLike(evt, id) {
     })
     .catch(console.error);
 }
-
-deleteModalCloseButton.addEventListener("click", () => {
-  closeModal(deleteModal);
-});
-
-deleteModalCancelButton.addEventListener("click", () => {
-  closeModal(deleteModal);
-});
 
 profileEditButton.addEventListener("click", () => {
   editModalNameInput.value = profileName.textContent;
