@@ -115,7 +115,7 @@
 }
 
 .modal__form-delete {
-  gap: 12px;
+  margin-bottom: 8px;
 }
 
 .modal__label {
@@ -225,6 +225,13 @@
   color: #fff;
 }
 
+.modal__container-delete {
+  display: block;
+  text-align: center;
+  padding: 10px;
+  margin: 10px auto;
+}
+
 @media screen and (max-width: 320px) {
   .modal {
     padding: 0 10px;
@@ -274,10 +281,6 @@
 
   .modal__input {
     font-size: 16px;
-  }
-
-  .modal__form-delete {
-    gap: 12px;
   }
 
   .modal__image {

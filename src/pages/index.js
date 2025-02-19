@@ -61,6 +61,7 @@ api
     const profileAvatar = document.querySelector(".profile__avatar");
 
     function setUserData(data) {
+      console.log(data);
       profileName.textContent = data.name;
       profileDescription.textContent = data.about;
       profileAvatar.src = data.avatar;
@@ -226,7 +227,6 @@ function handleAddCardSubmit(evt) {
 
 function handleAvatarSubmit(evt) {
   evt.preventDefault();
-
   const submitButton = evt.submitter;
   setButtonText(submitButton, true, "Saving...", "Save");
   avatarSubmitButton.disabled = true;
@@ -239,9 +239,7 @@ function handleAvatarSubmit(evt) {
     })
     .catch(console.error)
     .finally(() => {
-      setTimeout(() => {
-        avatarSubmitButton.disabled = false;
-      }, 1000);
+      setButtonText(submitButton, false, "Save", "Save");
     });
 }
 
