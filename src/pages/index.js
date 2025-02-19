@@ -50,27 +50,6 @@ const api = new Api({
   },
 });
 
-api
-  .getAppInfo()
-  .then(([cards, user]) => {
-    cards.forEach((item) => {
-      const cardElement = getCardElement(item);
-      cardsList.append(cardElement);
-    });
-
-    const profileAvatar = document.querySelector(".profile__avatar");
-
-    function setUserData(data) {
-      console.log(data);
-      profileName.textContent = data.name;
-      profileDescription.textContent = data.about;
-      profileAvatar.src = data.avatar;
-    }
-  })
-  .catch((err) => {
-    console.error(err);
-  });
-
 // Profile elements
 const profileEditButton = document.querySelector(".profile__edit-button");
 const cardModalButton = document.querySelector(".profile__add-button");
@@ -139,6 +118,27 @@ previewModalCloseButton.addEventListener("click", () => {
 // Card related elements
 const cardTemplate = document.querySelector("#card-template");
 const cardsList = document.querySelector(".cards__list");
+
+const profileAvatar = document.querySelector(".profile__avatar");
+
+function setUserData(data) {
+  profileName.textContent = data.name;
+  profileDescription.textContent = data.about;
+  profileAvatar.src = data.avatar;
+}
+
+api
+  .getAppInfo()
+  .then(([cards, user]) => {
+    cards.forEach((item) => {
+      const cardElement = getCardElement(item);
+      cardsList.append(cardElement);
+    });
+    setUserData(user);
+  })
+  .catch((err) => {
+    console.error(err);
+  });
 
 let selectedCard;
 let selectedCardId;
