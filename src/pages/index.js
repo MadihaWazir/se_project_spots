@@ -4,6 +4,7 @@ import {
   enableValidation,
   settings,
   resetValidation,
+  disableButton,
 } from "../scripts/validation.js";
 
 import logo from "../images/logo.svg";
@@ -196,6 +197,7 @@ function handleAddCardSubmit(evt) {
 
       evt.target.reset();
       closeModal(cardModal);
+      disableButton(submitBtn, settings);
     })
     .catch(console.error)
     .finally(() => {
