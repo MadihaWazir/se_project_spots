@@ -176,7 +176,7 @@ function handleEditFormSubmit(evt) {
       profileName.textContent = editModalNameInput.value;
       profileDescription.textContent = editModalDescriptionInput.value;
       closeModal(editModal);
-      disableButton(editModalSubmitButton, settings);
+      disableButton(submitButton, settings);
     })
     .catch(console.error)
     .finally(() => {
@@ -209,13 +209,13 @@ function handleAvatarSubmit(evt) {
   evt.preventDefault();
   const submitButton = evt.submitter;
   setButtonText(submitButton, true, "Saving...", "Save");
-  avatarSubmitButton.disabled = true;
 
   api
     .editAvatarInfo(avatarLinkInput.value)
     .then((data) => {
       profileAvatar.src = data.avatar;
       closeModal(avatarModal);
+      disableButton(submitButton, settings);
     })
     .catch(console.error)
     .finally(() => {
