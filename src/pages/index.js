@@ -216,6 +216,7 @@ function handleAvatarSubmit(evt) {
       profileAvatar.src = data.avatar;
       closeModal(avatarModal);
       disableButton(submitButton, settings);
+      evt.target.reset();
     })
     .catch(console.error)
     .finally(() => {

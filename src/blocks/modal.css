@@ -191,6 +191,7 @@
   right: -40px;
   top: -5px;
   opacity: 40%;
+  background: transparent url(../images/close-icon.svg);
 }
 
 .modal__submit-button_delete {
