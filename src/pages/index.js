@@ -291,12 +291,6 @@ function closeModalEsc(evt) {
 }
 
 avatarModalButton.addEventListener("click", () => {
-  avatarLinkInput.value = "";
-  resetValidation(avatarForm, [avatarLinkInput], {
-    inputErrorClass: "modal__input_type_error",
-    errorClass: "modal__error",
-  });
-
   openModal(avatarModal);
 });
 

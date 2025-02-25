@@ -279,6 +279,10 @@
     margin-bottom: 24px;
   }
 
+  .modal__submit-button {
+    width: 100%;
+  }
+
   .modal__container_type_preview {
     padding: 6px;
   }
