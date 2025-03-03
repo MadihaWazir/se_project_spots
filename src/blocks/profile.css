@@ -4,16 +4,46 @@
   border-bottom: 1px rgba(33, 33, 33, 0.4) solid;
 }
 
+.profile__avatar-container {
+  position: relative;
+  display: flex;
+}
+
+.profile__avatar-button {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  visibility: hidden;
+  background: transparent;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.profile__avatar-container:hover .profile__avatar-button {
+  visibility: visible;
+  cursor: pointer;
+}
+
+.profile__avatar-button::after {
+  content: "Edit Avatar";
+  color: #fff;
+}
+
 .profile__avatar {
   margin-right: 20px;
   height: 190px;
   width: 190px;
   border-radius: 8px;
+  object-fit: cover;
 }
 
 .profile__column {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
 }
 
 .profile__name {
@@ -35,10 +65,9 @@
   font-size: 16px;
   font-weight: 500;
   line-height: 16px;
-  text-align: left;
   gap: 12px;
   max-width: 420px;
-  font-family: Poppins, Arial, sans-serif;
+  font-family: Poppins, Arial Helvetica, sans-serif;
   color: rgba(33, 33, 33, 0.7);
   text-overflow: ellipsis;
   overflow: hidden;
@@ -65,7 +94,8 @@
 
 .profile__edit-button:hover {
   cursor: pointer;
-  opacity: 100%;
+  transition: cursor 2s;
+  opacity: 1;
 }
 
 .profile__add-button {
@@ -93,7 +123,7 @@
   cursor: pointer;
 }
 
-@media screen and (max-width: 627px) {
+@media screen and (max-width: 320px) {
   .profile {
     flex-direction: column;
     align-items: center;
@@ -106,15 +136,33 @@
     width: 80px;
   }
 
+  .profile__avatar-button {
+    visibility: visible;
+    background: transparent;
+    background-color: rgba(33, 33, 33, 0.6);
+    width: 23.34px;
+    height: 23.34px;
+    border-radius: 6px;
+    top: 65px;
+    left: 65px;
+  }
+
+  .profile__avatar-button::after {
+    content: "";
+  }
+
   .profile__name {
     line-height: 20px;
     font-size: 20px;
     margin-bottom: 6px;
-    max-width: 288px;
+    align-items: center;
   }
 
   .profile__description {
-    margin-bottom: 32px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 16px;
+    margin: 0 auto 32px;
     max-width: 288px;
     text-align: center;
   }
